@@ -1,0 +1,63 @@
+{
+  "name": "cricket",
+  "version": "0.1.0",
+  "description": "Send data over sound",
+  "main": "dist/cricket.min.js",
+  "scripts": {
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "tslint -p .",
+    "docs": "typedoc --out ./docs"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "typedoc --out ./docs"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint --fix",
+      "git add",
+      "jest --findRelatedTests"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "clean-webpack-plugin": "^0.1.19",
+    "husky": "^1.1.2",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
+    "ts-jest": "^23.10.4",
+    "ts-loader": "^5.2.1",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-loader": "^3.5.4",
+    "typedoc": "^0.13.0",
+    "typedoc-plugin-markdown": "^1.1.17",
+    "typedoc-webpack-plugin": "^1.1.4",
+    "typescript": "^3.1.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdtzmn/Cricket.git"
+  },
+  "keywords": [
+    "cricket",
+    "sound",
+    "data",
+    "transfer",
+    "send"
+  ],
+  "author": "jdtzmn <jdtzmn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdtzmn/Cricket/issues"
+  },
+  "homepage": "https://github.com/jdtzmn/Cricket#readme"
+}

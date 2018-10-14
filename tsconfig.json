@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "module": "UMD",
+    "target": "es6",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "strict": true
+  },
+  "files": [
+    "src/cricket.ts"
+  ]
+}
