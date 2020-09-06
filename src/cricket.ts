@@ -1,4 +1,4 @@
-import defaults from 'lodash/defaults'
+import { defaults } from 'lodash-es'
 import defaultSettings, { CricketSettings } from './settings'
 import BitArray from './bitArray'
 import Hamming from './hamming'

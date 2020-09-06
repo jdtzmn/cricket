@@ -1,5 +1,4 @@
-import flatten from 'lodash/flatten'
-import chunk from 'lodash/chunk'
+import { flatten, chunk } from 'lodash-es'
 import BitArray, { Binary } from './BitArray'
 
 /**
