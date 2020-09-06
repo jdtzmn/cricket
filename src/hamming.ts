@@ -1,4 +1,5 @@
-import { chunk, flatten } from 'lodash'
+import flatten from 'lodash/flatten'
+import chunk from 'lodash/chunk'
 import BitArray, { Binary } from './BitArray'
 
 /**
@@ -108,7 +109,7 @@ export default class Hamming {
     const superfluousBitsInBinary = superfluousBits
       .toString(2)
       .split('')
-      .map(str => +str) as Binary[]
+      .map((str) => +str) as Binary[]
 
     // Pad the superfluous bits in binary format to be the right size
     const removalChunk = new BitArray(this.dataBits - superfluousBitsInBinary.length).concat(
